@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" data-current-language="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta
+      name="description"
+      content="Auto Window Arranger precisely arranges the windows of apps you choose on macOS."
+    >
+    <title>Auto Window Arranger — Precise window layouts for macOS</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-language="en">Skip to content</span>
+      <span data-language="zh">跳到正文</span>
+    </a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Auto Window Arranger home">
+        <img src="assets/app-icon.png" alt="" width="32" height="32">
+        <span>Auto Window Arranger</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#install">
+          <span data-language="en">Install</span>
+          <span data-language="zh">安装</span>
+        </a>
+        <a href="#layouts">
+          <span data-language="en">Layouts</span>
+          <span data-language="zh">布局</span>
+        </a>
+        <a href="#privacy">
+          <span data-language="en">Privacy</span>
+          <span data-language="zh">隐私</span>
+        </a>
+      </nav>
+
+      <div class="language-switch" aria-label="Language">
+        <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language-option="zh" aria-pressed="false">中文</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span data-language="en">A precise macOS window utility</span>
+            <span data-language="zh">精确的 macOS 窗口工具</span>
+          </p>
+          <h1>Auto Window<br>Arranger</h1>
+          <p class="hero-promise">
+            <span data-language="en">Every window, exactly where it belongs.</span>
+            <span data-language="zh">让每个窗口，准确就位。</span>
+          </p>
+          <p class="hero-summary">
+            <span data-language="en">
+              Arrange every window from the apps you choose with one shortcut—or let the layout
+              update automatically as windows open and close.
+            </span>
+            <span data-language="zh">
+              一次快捷键，排列你所选 App 的全部窗口；窗口打开或关闭后，也可自动更新布局。
+            </span>
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/junjie-xyz/auto-window-arranger/releases/tag/v1.0.0-beta.1"
+            >
+              <span data-language="en">Download Beta</span>
+              <span data-language="zh">下载 Beta</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#install">
+              <span data-language="en">See how to install</span>
+              <span data-language="zh">查看安装步骤</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <p class="availability">
+            <span data-language="en">v1 is currently free · macOS 14+</span>
+            <span data-language="zh">v1 当前免费 · 需要 macOS 14+</span>
+          </p>
+        </div>
+
+        <figure class="geometry-stage">
+          <div
+            class="screen-outline"
+            role="img"
+            aria-label="Layout behavior diagram: five windows arranged into a precise grid, with the fifth centered above four equal tiles"
+            data-aria-label-en="Layout behavior diagram: five windows arranged into a precise grid, with the fifth centered above four equal tiles"
+            data-aria-label-zh="布局行为示意：五个窗口排列成精确网格，第五个窗口在四个等大窗口上方居中叠放"
+          >
+            <span class="screen-origin">0,0</span>
+            <div class="window-tile window-tile-one"><span>01</span></div>
+            <div class="window-tile window-tile-two"><span>02</span></div>
+            <div class="window-tile window-tile-three"><span>03</span></div>
+            <div class="window-tile window-tile-four"><span>04</span></div>
+            <div class="window-tile window-tile-five"><span>05</span></div>
+            <span class="dimension dimension-width">1440</span>
+            <span class="dimension dimension-height">900</span>
+          </div>
+          <figcaption>
+            <span data-language="en">Layout behavior diagram</span>
+            <span data-language="zh">布局行为示意</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="fact-line reveal" aria-label="Product facts">
+        <p>
+          <strong>
+            <span data-language="en">Local by design.</span>
+            <span data-language="zh">默认只在本机运行。</span>
+          </strong>
+          <span data-language="en">No telemetry. No automatic network requests. No required third-party app.</span>
+          <span data-language="zh">无遥测、无自动联网，也不要求安装任何第三方 App。</span>
+        </p>
+      </section>
+
+      <section class="section install-section" id="install">
+        <div class="section-heading reveal">
+          <p class="section-number">01</p>
+          <div>
+            <p class="eyebrow">
+              <span data-language="en">Three steps</span>
+              <span data-language="zh">三步开始</span>
+            </p>
+            <h2>
+              <span data-language="en">Install once. Arrange in a second.</span>
+              <span data-language="zh">安装一次，一秒排好。</span>
+            </h2>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-index">1</span>
+            <div>
+              <h3>
+                <span data-language="en">Download the beta</span>
+                <span data-language="zh">下载 Beta</span>
+              </h3>
+              <p>
+                <span data-language="en">Get version 1.0.0-beta.1 from the official GitHub pre-release.</span>
+                <span data-language="zh">从官方 GitHub 预发布页面获取 1.0.0-beta.1。</span>
+              </p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-index">2</span>
+            <div>
+              <h3>
+                <span data-language="en">Move it to Applications</span>
+                <span data-language="zh">移入“应用程序”</span>
+              </h3>
+              <p>
+                <span data-language="en">Copy Auto Window Arranger to <code>/Applications</code>, then open it.</span>
+                <span data-language="zh">将 Auto Window Arranger 复制到 <code>/Applications</code>，然后打开。</span>
+              </p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-index">3</span>
+            <div>
+              <h3>
+                <span data-language="en">Grant Accessibility</span>
+                <span data-language="zh">授予辅助功能权限</span>
+              </h3>
+              <p>
+                <span data-language="en">Choose the apps to arrange, then approve access when the app asks.</span>
+                <span data-language="zh">选择要排列的 App，并在应用说明用途后主动授权。</span>
+              </p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="permission-note reveal">
+          <p class="eyebrow">Accessibility</p>
+          <p>
+            <span data-language="en">
+              macOS Accessibility permission lets Auto Window Arranger read window geometry and move
+              the windows you selected. It does not read window titles, contents, keyboard input, or files.
+            </span>
+            <span data-language="zh">
+              macOS 辅助功能权限让 Auto Window Arranger 读取窗口几何信息并移动你所选 App 的窗口；
+              应用不会读取窗口标题、正文、键盘输入或文件。
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section layout-section" id="layouts">
+        <div class="section-heading reveal">
+          <p class="section-number">02</p>
+          <div>
+            <p class="eyebrow">
+              <span data-language="en">Exact geometry</span>
+              <span data-language="zh">精确几何</span>
+            </p>
+            <h2>
+              <span data-language="en">A layout for every window count.</span>
+              <span data-language="zh">每种窗口数量，都有清晰布局。</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="layout-list">
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-one" aria-hidden="true"><i></i></div>
+            <div><strong>1</strong><span data-language="en">Centered</span><span data-language="zh">原尺寸居中</span></div>
+          </article>
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-two" aria-hidden="true"><i></i><i></i></div>
+            <div><strong>2</strong><span data-language="en">Equal columns</span><span data-language="zh">左右等分</span></div>
+          </article>
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-three" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div><strong>3</strong><span data-language="en">Three columns</span><span data-language="zh">横向三等分</span></div>
+          </article>
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-four" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div><strong>4</strong><span data-language="en">2 × 2 grid</span><span data-language="zh">2 × 2 宫格</span></div>
+          </article>
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-five" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <div><strong>5</strong><span data-language="en">Grid + center</span><span data-language="zh">宫格 + 居中叠放</span></div>
+          </article>
+          <article class="layout-item reveal">
+            <div class="layout-diagram layout-six" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div><strong>6+</strong><span data-language="en">Balanced grid</span><span data-language="zh">自动等分网格</span></div>
+          </article>
+        </div>
+
+        <div class="layout-copy reveal">
+          <p>
+            <span data-language="en">
+              Layouts use the usable area of the display under your pointer, keeping clear of the menu bar and Dock.
+              Arrange one selected app at a time, cycle through running apps, or combine all selected apps in one layout.
+            </span>
+            <span data-language="zh">
+              布局使用鼠标所在显示器的可用区域，不遮挡菜单栏和 Dock。你可以一次排列一个所选 App、
+              在运行中的 App 之间循环，或把所有所选 App 合并到同一布局。
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section trust-section" id="privacy">
+        <div class="section-heading reveal">
+          <p class="section-number">03</p>
+          <div>
+            <p class="eyebrow">
+              <span data-language="en">Privacy and support</span>
+              <span data-language="zh">隐私与支持</span>
+            </p>
+            <h2>
+              <span data-language="en">Your windows stay on your Mac.</span>
+              <span data-language="zh">你的窗口信息留在 Mac 上。</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="trust-columns">
+          <div class="trust-column reveal">
+            <h3>
+              <span data-language="en">No background data transfer</span>
+              <span data-language="zh">不在后台传输数据</span>
+            </h3>
+            <p>
+              <span data-language="en">
+                Window and app metadata is processed locally. There is no account, advertising, telemetry,
+                automatic crash upload, cloud sync, or automatic update check.
+              </span>
+              <span data-language="zh">
+                窗口与 App 元数据只在本机处理。应用不含账号、广告、遥测、自动崩溃上传、云同步或自动更新检查。
+              </span>
+            </p>
+            <a class="text-link" href="https://github.com/junjie-xyz/auto-window-arranger/blob/main/docs/PRIVACY.md">
+              <span data-language="en">Read the privacy policy</span>
+              <span data-language="zh">阅读隐私政策</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="trust-column reveal">
+            <h3>
+              <span data-language="en">Support with a clear boundary</span>
+              <span data-language="zh">边界清晰的支持渠道</span>
+            </h3>
+            <p>
+              <span data-language="en">
+                Use GitHub Issues for non-sensitive problems. Send private support, privacy, or security details through the documented private channels.
+              </span>
+              <span data-language="zh">
+                非敏感问题请使用 GitHub Issues；私密支持、隐私或安全信息请通过文档中的私下渠道提交。
+              </span>
+            </p>
+            <a class="text-link" href="https://github.com/junjie-xyz/auto-window-arranger/blob/main/docs/SUPPORT.md">
+              <span data-language="en">View support options</span>
+              <span data-language="zh">查看支持方式</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="compatibility reveal">
+          <p>
+            <strong>
+              <span data-language="en">Compatibility</span>
+              <span data-language="zh">兼容性</span>
+            </strong>
+            <span data-language="en">
+              macOS 14 or later. Apple Silicon is supported. The Universal build includes Intel code,
+              but Intel hardware has not yet been verified.
+            </span>
+            <span data-language="zh">
+              需要 macOS 14 或更高版本。支持 Apple Silicon。Universal 包含 Intel 代码，但 Intel 真机尚未验证。
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section class="final-cta reveal">
+        <img src="assets/app-icon.png" alt="" width="72" height="72">
+        <p class="eyebrow">Auto Window Arranger</p>
+        <h2>
+          <span data-language="en">Give every window its place.</span>
+          <span data-language="zh">让每个窗口，各就各位。</span>
+        </h2>
+        <p>
+          <span data-language="en">v1 is currently free. Start with the public beta.</span>
+          <span data-language="zh">v1 当前免费，从公开 Beta 开始使用。</span>
+        </p>
+        <a
+          class="button button-primary"
+          href="https://github.com/junjie-xyz/auto-window-arranger/releases/tag/v1.0.0-beta.1"
+        >
+          <span data-language="en">Download v1.0.0-beta.1</span>
+          <span data-language="zh">下载 v1.0.0-beta.1</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Ding Junjie</p>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/junjie-xyz/auto-window-arranger/releases">Releases</a>
+        <a href="https://github.com/junjie-xyz/auto-window-arranger/issues">Issues</a>
+        <a href="https://github.com/junjie-xyz/auto-window-arranger/blob/main/docs/PRIVACY.md">Privacy</a>
+        <a href="https://github.com/junjie-xyz/auto-window-arranger/blob/main/SECURITY.md">Security</a>
+      </nav>
+    </footer>
+  </body>
+</html>

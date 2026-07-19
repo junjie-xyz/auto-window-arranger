@@ -1,0 +1,93 @@
+# Privacy Policy / 隐私政策
+
+Effective date: July 18, 2026 / 生效日期：2026 年 7 月 18 日
+
+This policy is provided by Ding Junjie (丁俊杰), the independent developer of Auto Window Arranger. / 本政策由 Auto Window Arranger 独立开发者丁俊杰提供。
+
+## English
+
+### Summary
+
+Auto Window Arranger processes window and app metadata locally to arrange windows. The app does not automatically send personal data, diagnostics, analytics, crash reports, or usage telemetry to the developer or any third party. It has no account, advertising, cloud sync, or automatic update service.
+
+### Data processed on your Mac
+
+After you choose target apps and grant macOS Accessibility permission, the app may process:
+
+- selected app names, bundle identifiers, local app paths, running state, and process identifiers;
+- window lists, roles, subroles, positions, sizes, and whether position or size can be changed;
+- Accessibility authorization status and error codes;
+- mouse position and display frames needed to choose the target screen;
+- shortcut settings, onboarding state, selected apps, and arrangement preferences stored in `UserDefaults`.
+
+The app may unminimize, move, resize, raise, activate, or unhide windows belonging to apps you selected. It does not request window titles, window contents, text values, document URLs, keyboard input, clipboard contents, or user file contents.
+
+### Local logs and diagnostics
+
+macOS Unified Logging may store local diagnostic events, hashed target-app identifiers, process and window counts, window geometry, Accessibility roles and error codes, shortcut display values, and retry state. The app does not upload these logs.
+
+When you choose **Copy Diagnostics**, the app writes a sanitized report to the clipboard. The report includes app and macOS versions, CPU architecture, Accessibility status, app-install location, configured target count, safe-mode state, and recent fixed-format events. It excludes target-app names and identifiers, window contents, file paths, credentials, and window coordinates.
+
+### Network activity and sharing
+
+The app makes no automatic network requests. It does not sell or automatically share data. Opening a developer link, filing an issue, or sending an email or diagnostic report is an action you initiate. Information you submit is used to respond to support, privacy, or security requests and is retained only as long as reasonably necessary for that purpose, security records, or legal obligations.
+
+### Retention and deletion
+
+App preferences remain on your Mac until you remove them. To remove them, quit the app and run:
+
+```bash
+defaults delete xyz.junjie.auto-window-arranger
+```
+
+You can revoke Accessibility access in **System Settings → Privacy & Security → Accessibility**. Clipboard contents remain until replaced or cleared. Unified Logs are retained and deleted by macOS according to system policy; the app does not control or upload them.
+
+You may request deletion of information you voluntarily sent to the developer by emailing `ioriens@outlook.com`, subject to security and legal retention requirements.
+
+### Changes and contact
+
+This policy must be updated before adding telemetry, automatic crash uploads, accounts, cloud sync, automatic update checks, advertising, or new remote data transfers. Privacy questions and requests may be sent to `ioriens@outlook.com`.
+
+## 简体中文
+
+### 摘要
+
+Auto Window Arranger 只在本机处理排列窗口所需的窗口和 App 元数据。应用不会自动向开发者或任何第三方发送个人数据、诊断、分析、崩溃报告或使用情况遥测，也不提供账号、广告、云同步或自动更新服务。
+
+### 在 Mac 本机处理的数据
+
+你选择目标 App 并授予 macOS 辅助功能权限后，应用可能处理：
+
+- 所选 App 的名称、Bundle ID、本地 App 路径、运行状态和进程 ID；
+- 窗口列表、role、subrole、位置、尺寸，以及位置或尺寸是否可修改；
+- 辅助功能授权状态和错误代码；
+- 选择目标屏幕所需的鼠标位置和显示器范围；
+- 保存在 `UserDefaults` 中的快捷键、首次运行状态、所选 App 和排列偏好。
+
+应用可能取消最小化、移动、调整尺寸、前置、激活或取消隐藏你所选 App 的窗口。应用不会请求窗口标题、窗口正文、文本值、文档 URL、键盘输入、剪贴板原内容或用户文件内容。
+
+### 本机日志与诊断
+
+macOS 统一日志可能在本机保存诊断事件、经过系统哈希处理的目标 App 标识、进程和窗口数量、窗口几何信息、辅助功能 role 和错误代码、快捷键显示值及重试状态。应用不会上传这些日志。
+
+你主动选择“复制诊断信息”后，应用会把脱敏报告写入剪贴板。报告包含 App 和 macOS 版本、CPU 架构、辅助功能状态、App 安装位置、已配置目标数量、安全模式状态和最近的固定格式事件；不包含目标 App 名称和标识、窗口内容、文件路径、凭据或窗口坐标。
+
+### 网络活动与共享
+
+应用不发起自动网络请求，也不出售或自动共享数据。打开开发者链接、提交 Issue、发送邮件或诊断报告均由你主动操作。你提交的信息只用于处理支持、隐私或安全请求，并仅在合理处理期限、安全记录或法律义务所需期间保留。
+
+### 保留与删除
+
+应用偏好保留在你的 Mac 上，直到你主动删除。退出应用后可运行以下命令删除：
+
+```bash
+defaults delete xyz.junjie.auto-window-arranger
+```
+
+你可以在“系统设置 → 隐私与安全性 → 辅助功能”中撤销权限。剪贴板内容会保留到被替换或清除。统一日志由 macOS 按系统策略保留和删除，应用不控制或上传这些日志。
+
+你可以发送邮件到 `ioriens@outlook.com`，请求删除曾主动提交给开发者的信息；安全和法律保留要求除外。
+
+### 变更与联系
+
+增加遥测、自动崩溃上传、账号、云同步、自动更新检查、广告或新的远程数据传输前，必须先更新本政策。隐私问题和请求可发送至 `ioriens@outlook.com`。
