@@ -4,7 +4,7 @@ Auto Window Arranger is a macOS menu bar app that precisely arranges every windo
 
 Auto Window Arranger 是一款 macOS 菜单栏应用，用于精确排列你所选 App 的全部窗口。你可以手动触发布局、使用可配置的全局快捷键，或在窗口打开和关闭后自动更新布局。
 
-[Official website / 官方网站](https://junjie-xyz.github.io/auto-window-arranger/)
+[Official website / 官方网站](https://junjie.xyz/auto-window-arranger/)
 
 ## Download / 下载
 
@@ -42,7 +42,7 @@ Read the complete [Privacy Policy](docs/PRIVACY.md). / 阅读完整的[隐私政
 
 ## Documentation / 文档
 
-- [Website / 官网](https://junjie-xyz.github.io/auto-window-arranger/)
+- [Website / 官网](https://junjie.xyz/auto-window-arranger/)
 - [Privacy / 隐私](docs/PRIVACY.md)
 - [Support / 支持](docs/SUPPORT.md)
 - [License / 许可](LICENSE)
