@@ -52,7 +52,7 @@ html[data-current-language="zh"] [data-language="en"] {
 }
 
 html[data-current-language="zh"] [data-language="zh"] {
-  display: inline;
+  display: revert;
 }
 
 .skip-link {
@@ -701,6 +701,101 @@ code {
   gap: 24px;
 }
 
+.document-shell {
+  width: min(100% - (var(--page-gutter) * 2), 1080px);
+  margin-inline: auto;
+  padding: clamp(72px, 10vw, 128px) 0 clamp(110px, 14vw, 180px);
+}
+
+.document-hero {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.28fr) 1fr;
+  gap: 30px;
+  padding-bottom: clamp(56px, 8vw, 92px);
+}
+
+.document-hero h1 {
+  max-width: 820px;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 660;
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+}
+
+.document-lead {
+  max-width: 720px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 24px);
+  letter-spacing: -0.02em;
+}
+
+.document-content {
+  max-width: 800px;
+  margin-left: calc(28% + 30px);
+}
+
+.document-content section {
+  padding: 42px 0 46px;
+  border-top: 1px solid var(--line);
+}
+
+.document-content section:first-child {
+  border-top-color: var(--ink);
+}
+
+.document-content h2 {
+  margin: 0 0 24px;
+  font-size: clamp(29px, 3vw, 40px);
+  font-weight: 640;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.document-content h3 {
+  margin: 30px 0 12px;
+  font-size: 18px;
+}
+
+.document-content p,
+.document-content ul,
+.document-content ol {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.document-content ul,
+.document-content ol {
+  padding-left: 1.35em;
+}
+
+.document-content li + li {
+  margin-top: 8px;
+}
+
+.document-content a {
+  color: var(--accent-dark);
+  text-decoration-color: rgba(7, 88, 202, 0.35);
+  text-underline-offset: 4px;
+}
+
+.document-content pre {
+  overflow-x: auto;
+  margin: 20px 0;
+  padding: 18px 20px;
+  border-left: 2px solid var(--accent);
+  background: var(--surface);
+}
+
+.document-content pre code {
+  font-size: 14px;
+}
+
+.document-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .motion-ready .window-tile {
   opacity: 0;
   transform: translateY(18px) scale(0.985);
@@ -867,6 +962,15 @@ code {
 
   .compatibility {
     padding-left: 0;
+  }
+
+  .document-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .document-content {
+    margin-left: 0;
   }
 
   .site-footer {

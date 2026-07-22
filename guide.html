@@ -1,0 +1,236 @@
+<!doctype html>
+<html
+  lang="en"
+  data-current-language="en"
+  data-title-en="User Guide — Auto Window Arranger"
+  data-title-zh="使用指南 — Auto Window Arranger"
+>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta
+      name="description"
+      content="Install, configure, use, troubleshoot, and uninstall Auto Window Arranger."
+      data-description-en="Install, configure, use, troubleshoot, and uninstall Auto Window Arranger."
+      data-description-zh="安装、设置、使用、排查和卸载 Auto Window Arranger。"
+    >
+    <title>User Guide — Auto Window Arranger</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-language="en">Skip to content</span>
+      <span data-language="zh">跳到正文</span>
+    </a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Auto Window Arranger home" data-aria-label-en="Auto Window Arranger home" data-aria-label-zh="Auto Window Arranger 首页">
+        <img src="assets/app-icon.png" alt="" width="32" height="32">
+        <span>Auto Window Arranger</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation" data-aria-label-en="Primary navigation" data-aria-label-zh="主导航">
+        <a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a>
+        <a href="guide.html" aria-current="page"><span data-language="en">Guide</span><span data-language="zh">指南</span></a>
+        <a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a>
+        <a href="support.html"><span data-language="en">Support</span><span data-language="zh">支持</span></a>
+      </nav>
+      <div class="language-switch" aria-label="Language" data-aria-label-en="Language" data-aria-label-zh="语言">
+        <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language-option="zh" aria-pressed="false">中文</button>
+      </div>
+    </header>
+
+    <main class="document-shell" id="main-content">
+      <header class="document-hero">
+        <p class="section-number">DOC 01</p>
+        <div>
+          <p class="eyebrow">Auto Window Arranger</p>
+          <h1><span data-language="en">User Guide</span><span data-language="zh">使用指南</span></h1>
+          <p class="document-lead">
+            <span data-language="en">Everything needed to install the app and arrange your first set of windows.</span>
+            <span data-language="zh">从安装应用到完成第一次窗口排列所需的全部内容。</span>
+          </p>
+        </div>
+      </header>
+
+      <article class="document-content" data-language="en" lang="en">
+        <section>
+          <h2>Requirements</h2>
+          <ul>
+            <li>macOS 14 or later.</li>
+            <li>Apple Silicon is supported. The Universal build includes Intel code, but Intel hardware has not yet been verified.</li>
+            <li>Accessibility permission is required to inspect and move the windows of apps you select.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Install</h2>
+          <ol>
+            <li>Download the signed DMG from <a href="https://github.com/junjie-xyz/auto-window-arranger/releases">GitHub Releases</a>.</li>
+            <li>Open the DMG and drag <strong>Auto Window Arranger</strong> to <strong>Applications</strong>.</li>
+            <li>Eject the DMG, then open the app from <code>/Applications</code>.</li>
+          </ol>
+          <p>Move the app to <code>/Applications</code> before requesting Accessibility permission. Running it from the DMG or another location can prevent macOS from keeping the authorization stable.</p>
+        </section>
+        <section>
+          <h2>First setup</h2>
+          <ol>
+            <li>Read the Accessibility explanation in the welcome window.</li>
+            <li>Add the apps whose windows you want to arrange. The list may remain empty until you are ready.</li>
+            <li>Select <strong>Request Accessibility Permission</strong>.</li>
+            <li>In <strong>System Settings → Privacy &amp; Security → Accessibility</strong>, enable Auto Window Arranger.</li>
+            <li>Return to the app. The permission status updates automatically; no restart is required.</li>
+          </ol>
+          <p>You can change the selected apps later in <strong>Settings…</strong>. Auto Window Arranger does not preselect or require any third-party app.</p>
+        </section>
+        <section>
+          <h2>Arrange windows</h2>
+          <ul>
+            <li><strong>Left-click the menu bar icon:</strong> arrange one selected, running app.</li>
+            <li><strong>Arrange Now:</strong> perform the same single-app arrangement from the right-click menu.</li>
+            <li><strong>Arrange Together:</strong> place the windows of all selected, running apps into one combined layout.</li>
+            <li><strong>Default single-app shortcut:</strong> <code>⌥⌘A</code>.</li>
+            <li><strong>Default combined shortcut:</strong> <code>⌥⇧⌘A</code>.</li>
+          </ul>
+          <p>Layouts use the usable area of the display under the pointer and keep clear of the menu bar and Dock. One window keeps its size and is centered; two to four windows use columns or a grid; five windows use a four-window grid with the fifth centered; six or more use a balanced grid.</p>
+          <p>When app cycling is enabled, repeated manual single-app arrangements move through the selected apps that are currently running. Automatic arrangements do not change the frontmost app.</p>
+        </section>
+        <section>
+          <h2>Automatic arrangement</h2>
+          <p>After Accessibility permission is granted, Auto Window Arranger monitors the selected apps. Opening or closing an eligible window schedules a new arrangement after the window state settles, normally within about one second.</p>
+          <p>The app only handles standard windows whose position and size macOS allows it to change. Dialogs, popovers, fixed-size windows, and other auxiliary windows may be skipped.</p>
+        </section>
+        <section>
+          <h2>Settings and menu</h2>
+          <p>Right-click the menu bar icon to access:</p>
+          <ul>
+            <li><strong>Arrange Now</strong> and <strong>Arrange Together</strong>;</li>
+            <li><strong>Accessibility Permission…</strong> to review or recover authorization;</li>
+            <li><strong>Settings…</strong> to add or remove apps, change both shortcuts, enable or disable app cycling, or reset all settings;</li>
+            <li><strong>Copy Diagnostics</strong> to copy a sanitized local report for support;</li>
+            <li><strong>About Auto Window Arranger…</strong> and <strong>Quit</strong>.</li>
+          </ul>
+          <p>Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. If a shortcut conflicts with another app, choose a different combination in Settings.</p>
+        </section>
+        <section>
+          <h2>Troubleshooting</h2>
+          <h3>Accessibility cannot be requested</h3>
+          <p>Confirm the app is in <code>/Applications</code>, then reopen <strong>Accessibility Permission…</strong> from the right-click menu. If System Settings does not open at the correct page, go to <strong>Privacy &amp; Security → Accessibility</strong> manually.</p>
+          <h3>Permission is enabled but windows cannot be arranged</h3>
+          <p>Turn Auto Window Arranger off and on again in Accessibility settings, confirm that the running copy is the one in <code>/Applications</code>, and retry.</p>
+          <h3>No eligible windows are found</h3>
+          <p>Open at least one standard window in a selected app. Minimized eligible windows are restored automatically, but dialogs, popovers, and windows that cannot be resized are excluded.</p>
+          <h3>Only some windows move</h3>
+          <p>Some apps enforce minimum sizes or change their own window frames. Auto Window Arranger retries, keeps successful changes, and reports a partial result when necessary.</p>
+          <p>For help, read <a href="support.html">Support</a> or open a <a href="https://github.com/junjie-xyz/auto-window-arranger/issues">GitHub Issue</a>. Do not post credentials, window contents, private files, or unredacted logs.</p>
+        </section>
+        <section>
+          <h2>Uninstall</h2>
+          <ol>
+            <li>Choose <strong>Quit</strong> from the right-click menu.</li>
+            <li>Move <strong>Auto Window Arranger</strong> from <code>/Applications</code> to the Trash using Finder.</li>
+            <li>Optionally remove its saved settings:</li>
+          </ol>
+          <pre><code>defaults delete xyz.junjie.auto-window-arranger</code></pre>
+          <p>Optionally remove Auto Window Arranger from <strong>System Settings → Privacy &amp; Security → Accessibility</strong>. The app does not install a background helper or automatic updater.</p>
+        </section>
+      </article>
+
+      <article class="document-content" data-language="zh" lang="zh-CN">
+        <section>
+          <h2>系统要求</h2>
+          <ul>
+            <li>macOS 14 或更高版本。</li>
+            <li>支持 Apple Silicon。Universal 安装包包含 Intel 代码，但尚未完成 Intel 真机验证。</li>
+            <li>需要辅助功能权限，才能检查和移动你所选 App 的窗口。</li>
+          </ul>
+        </section>
+        <section>
+          <h2>安装</h2>
+          <ol>
+            <li>从 <a href="https://github.com/junjie-xyz/auto-window-arranger/releases">GitHub Releases</a> 下载已签名的 DMG。</li>
+            <li>打开 DMG，将 <strong>Auto Window Arranger</strong> 拖入“应用程序”。</li>
+            <li>推出 DMG，再从 <code>/Applications</code> 打开应用。</li>
+          </ol>
+          <p>请先把应用移入 <code>/Applications</code>，再请求辅助功能权限。从 DMG 或其他位置运行可能导致 macOS 无法稳定保留授权。</p>
+        </section>
+        <section>
+          <h2>首次设置</h2>
+          <ol>
+            <li>阅读欢迎窗口中的辅助功能用途说明。</li>
+            <li>添加需要排列窗口的 App；也可以暂时保持列表为空。</li>
+            <li>点击“请求辅助功能权限”。</li>
+            <li>在“系统设置 → 隐私与安全性 → 辅助功能”中启用 Auto Window Arranger。</li>
+            <li>返回应用。权限状态会自动更新，无需重启。</li>
+          </ol>
+          <p>以后可以在“设置…”中修改 App 列表。Auto Window Arranger 不会预选或要求安装任何第三方 App。</p>
+        </section>
+        <section>
+          <h2>排列窗口</h2>
+          <ul>
+            <li><strong>左键点击菜单栏图标：</strong>排列一个已选择且正在运行的 App。</li>
+            <li><strong>立即排列：</strong>从右键菜单执行相同的单 App 排列。</li>
+            <li><strong>组合排列：</strong>把所有已选择且正在运行的 App 窗口放入一个组合布局。</li>
+            <li><strong>默认单 App 快捷键：</strong><code>⌥⌘A</code>。</li>
+            <li><strong>默认组合排列快捷键：</strong><code>⌥⇧⌘A</code>。</li>
+          </ul>
+          <p>布局使用鼠标所在显示器的可用区域，不遮挡菜单栏和 Dock。一个窗口保持原尺寸并居中；两个至四个窗口使用分栏或宫格；五个窗口使用四窗口宫格，并把第五个窗口居中；六个及以上窗口使用自动等分网格。</p>
+          <p>开启 App 循环后，连续手动执行单 App 排列会依次处理当前正在运行的所选 App。自动排列不会切换前台 App。</p>
+        </section>
+        <section>
+          <h2>自动排列</h2>
+          <p>取得辅助功能权限后，Auto Window Arranger 会监控所选 App。符合条件的窗口打开或关闭后，应用会等待窗口状态稳定并重新排列，通常在约一秒内触发。</p>
+          <p>应用只处理 macOS 允许修改位置和尺寸的标准窗口。对话框、popover、固定尺寸窗口和其他辅助窗口可能被跳过。</p>
+        </section>
+        <section>
+          <h2>设置与菜单</h2>
+          <p>右键点击菜单栏图标可以使用：</p>
+          <ul>
+            <li>“立即排列”和“组合排列”；</li>
+            <li>“辅助功能权限…”：查看或恢复授权；</li>
+            <li>“设置…”：添加或移除 App、修改两个快捷键、开启或关闭 App 循环，或重置全部设置；</li>
+            <li>“复制诊断信息”：复制用于支持的脱敏本机报告；</li>
+            <li>“关于 Auto Window Arranger…”和“退出”。</li>
+          </ul>
+          <p>自定义快捷键必须包含 Command、Option 或 Control。两个排列动作不能使用相同快捷键。如果快捷键与其他应用冲突，请在设置中更换组合。</p>
+        </section>
+        <section>
+          <h2>常见问题</h2>
+          <h3>无法请求辅助功能权限</h3>
+          <p>确认应用位于 <code>/Applications</code>，然后从右键菜单重新打开“辅助功能权限…”。如果系统设置没有定位到正确页面，请手动进入“隐私与安全性 → 辅助功能”。</p>
+          <h3>已经授权，但仍无法排列窗口</h3>
+          <p>在辅助功能设置中关闭再重新启用 Auto Window Arranger，确认当前运行的是 <code>/Applications</code> 中的副本，然后重试。</p>
+          <h3>没有找到可排列的窗口</h3>
+          <p>请在所选 App 中至少打开一个标准窗口。符合条件的最小化窗口会自动恢复，但对话框、popover 和不可调整尺寸的窗口会被排除。</p>
+          <h3>只移动了部分窗口</h3>
+          <p>部分 App 会强制最小尺寸或自行修改窗口位置。Auto Window Arranger 会重试、保留已经成功的变更，并在必要时报告“部分完成”。</p>
+          <p>需要帮助时，请阅读<a href="support.html">支持文档</a>或提交 <a href="https://github.com/junjie-xyz/auto-window-arranger/issues">GitHub Issue</a>。不要公开凭据、窗口内容、私密文件或未脱敏日志。</p>
+        </section>
+        <section>
+          <h2>卸载</h2>
+          <ol>
+            <li>从右键菜单选择“退出”。</li>
+            <li>使用 Finder 将 <code>/Applications</code> 中的 <strong>Auto Window Arranger</strong> 移到废纸篓。</li>
+            <li>如需同时删除已保存的设置，可以运行：</li>
+          </ol>
+          <pre><code>defaults delete xyz.junjie.auto-window-arranger</code></pre>
+          <p>如有需要，在“系统设置 → 隐私与安全性 → 辅助功能”中移除 Auto Window Arranger。应用不会安装后台 helper 或自动更新程序。</p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Ding Junjie</p>
+      <nav aria-label="Footer navigation" data-aria-label-en="Footer navigation" data-aria-label-zh="页脚导航">
+        <a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a>
+        <a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a>
+        <a href="support.html"><span data-language="en">Support</span><span data-language="zh">支持</span></a>
+        <a href="security.html"><span data-language="en">Security</span><span data-language="zh">安全</span></a>
+        <a href="https://github.com/junjie-xyz/auto-window-arranger/releases"><span data-language="en">Releases</span><span data-language="zh">发布</span></a>
+      </nav>
+    </footer>
+  </body>
+</html>

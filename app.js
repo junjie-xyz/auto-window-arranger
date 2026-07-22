@@ -2,7 +2,12 @@ const root = document.documentElement;
 const languageButtons = document.querySelectorAll("[data-language-option]");
 const revealElements = document.querySelectorAll(".reveal");
 const localizedLabels = document.querySelectorAll("[data-aria-label-en][data-aria-label-zh]");
+const localizedDescriptions = document.querySelectorAll("[data-description-en][data-description-zh]");
 const supportedLanguages = new Set(["en", "zh"]);
+const pageTitles = {
+  en: root.dataset.titleEn || "Auto Window Arranger — Precise window layouts for macOS",
+  zh: root.dataset.titleZh || "Auto Window Arranger — 精确排列 macOS 窗口",
+};
 
 function getSavedLanguage() {
   try {
@@ -20,13 +25,26 @@ function saveLanguage(language) {
   }
 }
 
-function setLanguage(language, shouldSave = true) {
+function getURLLanguage() {
+  const language = new URLSearchParams(window.location.search).get("lang");
+  return supportedLanguages.has(language) ? language : null;
+}
+
+function updateURLLanguage(language) {
+  try {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", language);
+    window.history.replaceState(null, "", url);
+  } catch {
+    // Language switching does not depend on URL updates.
+  }
+}
+
+function setLanguage(language, shouldSave = true, shouldUpdateURL = true) {
   const nextLanguage = supportedLanguages.has(language) ? language : "en";
   root.dataset.currentLanguage = nextLanguage;
   root.lang = nextLanguage === "zh" ? "zh-CN" : "en";
-  document.title = nextLanguage === "zh"
-    ? "Auto Window Arranger — 精确排列 macOS 窗口"
-    : "Auto Window Arranger — Precise window layouts for macOS";
+  document.title = pageTitles[nextLanguage];
 
   languageButtons.forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.languageOption === nextLanguage));
@@ -37,8 +55,19 @@ function setLanguage(language, shouldSave = true) {
     element.setAttribute("aria-label", label);
   });
 
+  localizedDescriptions.forEach((element) => {
+    element.setAttribute(
+      "content",
+      nextLanguage === "zh" ? element.dataset.descriptionZh : element.dataset.descriptionEn,
+    );
+  });
+
   if (shouldSave) {
     saveLanguage(nextLanguage);
+  }
+
+  if (shouldUpdateURL) {
+    updateURLLanguage(nextLanguage);
   }
 }
 
@@ -48,7 +77,8 @@ languageButtons.forEach((button) => {
 
 const savedLanguage = getSavedLanguage();
 const preferredLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-setLanguage(savedLanguage || preferredLanguage, false);
+const urlLanguage = getURLLanguage();
+setLanguage(urlLanguage || savedLanguage || preferredLanguage, Boolean(urlLanguage), false);
 
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   revealElements.forEach((element) => element.classList.add("is-visible"));

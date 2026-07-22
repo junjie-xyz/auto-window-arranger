@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-current-language="en" data-title-en="Changelog — Auto Window Arranger" data-title-zh="变更记录 — Auto Window Arranger">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Release history for Auto Window Arranger." data-description-en="Release history for Auto Window Arranger." data-description-zh="Auto Window Arranger 发布历史。">
+    <title>Changelog — Auto Window Arranger</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content"><span data-language="en">Skip to content</span><span data-language="zh">跳到正文</span></a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Auto Window Arranger home" data-aria-label-en="Auto Window Arranger home" data-aria-label-zh="Auto Window Arranger 首页"><img src="assets/app-icon.png" alt="" width="32" height="32"><span>Auto Window Arranger</span></a>
+      <nav class="site-nav" aria-label="Primary navigation" data-aria-label-en="Primary navigation" data-aria-label-zh="主导航"><a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a><a href="guide.html"><span data-language="en">Guide</span><span data-language="zh">指南</span></a><a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a><a href="support.html"><span data-language="en">Support</span><span data-language="zh">支持</span></a></nav>
+      <div class="language-switch" aria-label="Language" data-aria-label-en="Language" data-aria-label-zh="语言"><button type="button" data-language-option="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language-option="zh" aria-pressed="false">中文</button></div>
+    </header>
+
+    <main class="document-shell" id="main-content">
+      <header class="document-hero"><p class="section-number">DOC 06</p><div><p class="eyebrow">Auto Window Arranger</p><h1><span data-language="en">Changelog</span><span data-language="zh">变更记录</span></h1><p class="document-lead"><span data-language="en">Verified features, requirements, and known limitations for every public release.</span><span data-language="zh">记录每个公开版本已验证的功能、系统要求和已知限制。</span></p></div></header>
+
+      <article class="document-content" data-language="en" lang="en">
+        <section><p>This project follows <a href="https://semver.org/">Semantic Versioning</a>. Each release records verified features, known issues, minimum macOS version, and supported architectures.</p></section>
+        <section><h2>Unreleased</h2><p>No unreleased public changes.</p></section>
+        <section>
+          <h2>1.0.0-beta.1</h2>
+          <p class="document-meta">July 19, 2026 · First public beta</p>
+          <h3>Verified</h3>
+          <ul><li>Single-app arrangement and combined multi-app arrangement.</li><li>Layouts for one, two, three, four, five, and six or more windows.</li><li>Configurable global shortcuts, target-app selection, and cycling between running target apps.</li><li>Automatic re-arrangement after selected windows open or close.</li><li>First-run guidance for installation location and macOS Accessibility permission, including recovery after permission is revoked.</li><li>Target-app installation and running-state feedback, persisted settings, shortcut-conflict feedback, and sanitized diagnostics.</li><li>Debug and Release test suites passed on Apple Silicon.</li><li>Universal packaging contains arm64 and x86_64 code.</li></ul>
+          <h3>Requirements</h3><ul><li>macOS 14 or later.</li><li>Apple Silicon is supported.</li></ul>
+          <h3>Known limitations</h3><ul><li>Intel code is included in the Universal package, but Intel hardware has not yet been verified.</li><li>Lume-based clean-install and full UI validation is not yet complete.</li></ul>
+        </section>
+      </article>
+
+      <article class="document-content" data-language="zh" lang="zh-CN">
+        <section><p>本项目采用<a href="https://semver.org/">语义化版本</a>。每个版本记录已验证功能、已知问题、最低 macOS 版本和支持架构。</p></section>
+        <section><h2>尚未发布</h2><p>暂无尚未发布的公开变更。</p></section>
+        <section>
+          <h2>1.0.0-beta.1</h2>
+          <p class="document-meta">2026 年 7 月 19 日 · 首个公开 Beta</p>
+          <h3>已验证</h3>
+          <ul><li>单 App 排列和多 App 组合排列。</li><li>已验证 1、2、3、4、5 和 6 个以上窗口的布局。</li><li>可配置的全局快捷键、目标 App 选择及运行中目标 App 的循环切换。</li><li>所选窗口打开或关闭后的自动重排。</li><li>首次运行时的安装位置和 macOS 辅助功能权限引导，以及权限撤销后的恢复入口。</li><li>目标 App 安装与运行状态反馈、设置持久化、快捷键冲突反馈和脱敏诊断。</li><li>Debug 和 Release 测试套件已在 Apple Silicon 上通过。</li><li>Universal 包已包含 arm64 和 x86_64 代码。</li></ul>
+          <h3>系统要求</h3><ul><li>macOS 14 或更高版本。</li><li>支持 Apple Silicon。</li></ul>
+          <h3>已知限制</h3><ul><li>Universal 包已包含 Intel 代码，但 Intel 真机尚未验证。</li><li>基于 Lume 的干净安装与完整界面验证尚未完成。</li></ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Ding Junjie</p><nav aria-label="Footer navigation" data-aria-label-en="Footer navigation" data-aria-label-zh="页脚导航"><a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a><a href="guide.html"><span data-language="en">Guide</span><span data-language="zh">指南</span></a><a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a><a href="license.html"><span data-language="en">License</span><span data-language="zh">许可</span></a><a href="https://github.com/junjie-xyz/auto-window-arranger/releases"><span data-language="en">Releases</span><span data-language="zh">发布</span></a></nav></footer>
+  </body>
+</html>

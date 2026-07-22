@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-current-language="en" data-title-en="Security — Auto Window Arranger" data-title-zh="安全政策 — Auto Window Arranger">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Security policy for Auto Window Arranger." data-description-en="Security policy for Auto Window Arranger." data-description-zh="Auto Window Arranger 安全政策。">
+    <title>Security — Auto Window Arranger</title>
+    <link rel="icon" type="image/png" href="assets/app-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content"><span data-language="en">Skip to content</span><span data-language="zh">跳到正文</span></a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Auto Window Arranger home" data-aria-label-en="Auto Window Arranger home" data-aria-label-zh="Auto Window Arranger 首页"><img src="assets/app-icon.png" alt="" width="32" height="32"><span>Auto Window Arranger</span></a>
+      <nav class="site-nav" aria-label="Primary navigation" data-aria-label-en="Primary navigation" data-aria-label-zh="主导航"><a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a><a href="guide.html"><span data-language="en">Guide</span><span data-language="zh">指南</span></a><a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a><a href="support.html"><span data-language="en">Support</span><span data-language="zh">支持</span></a></nav>
+      <div class="language-switch" aria-label="Language" data-aria-label-en="Language" data-aria-label-zh="语言"><button type="button" data-language-option="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language-option="zh" aria-pressed="false">中文</button></div>
+    </header>
+
+    <main class="document-shell" id="main-content">
+      <header class="document-hero"><p class="section-number">DOC 04</p><div><p class="eyebrow">Auto Window Arranger</p><h1><span data-language="en">Security Policy</span><span data-language="zh">安全政策</span></h1><p class="document-lead"><span data-language="en">Report vulnerabilities privately and keep sensitive details out of public channels.</span><span data-language="zh">请私下报告漏洞，不要在公开渠道提交敏感细节。</span></p></div></header>
+
+      <article class="document-content" data-language="en" lang="en">
+        <section><h2>Supported versions</h2><p>No public stable version has been released, so no released version currently has a promised security-maintenance period. This section will identify supported stable versions before support is claimed.</p></section>
+        <section>
+          <h2>Reporting a vulnerability</h2>
+          <p>Do not submit credentials, tokens, certificates, private keys, user window contents, identifiable diagnostics, or complete exploit details through a public issue, discussion, social post, or public log.</p>
+          <p>Use the repository's <strong>Security → Report a vulnerability</strong> form. If that form is unavailable, send reports to <code>ioriens@outlook.com</code> with <code>Security</code> in the subject.</p>
+          <p>Include:</p>
+          <ul><li>affected version, macOS version, and hardware architecture;</li><li>impact and the smallest repeatable steps;</li><li>expected and actual behavior;</li><li>sanitized diagnostics, if relevant;</li><li>whether the issue has been disclosed elsewhere.</li></ul>
+        </section>
+        <section>
+          <h2>Handling principles</h2>
+          <ul><li>Reports are acknowledged and assessed before a severity or timeline is promised.</li><li>Fixes use a new version and never replace an existing release tag or asset.</li><li>Security releases repeat signing, notarization, stapling, Gatekeeper, and clean-install validation.</li><li>Public advisories avoid user data and delay exploit details until users have had a reasonable opportunity to update.</li></ul>
+        </section>
+        <section>
+          <h2>Security boundary</h2>
+          <ul><li>The app uses the macOS Accessibility API locally to inspect and arrange windows of user-selected apps.</li><li>macOS requires explicit user approval for Accessibility access.</li><li>Client builds must not contain Apple, GitHub, notarization, update, or other service credentials.</li><li>Developer ID signing and Apple notarization provide source and integrity signals, but do not prevent copying, decompilation, or reverse engineering.</li></ul>
+        </section>
+      </article>
+
+      <article class="document-content" data-language="zh" lang="zh-CN">
+        <section><h2>支持版本</h2><p>目前尚未发布公开 stable 版本，因此没有已发布版本获得安全维护周期承诺。正式声明支持前，本节会列出受支持的 stable 版本。</p></section>
+        <section>
+          <h2>私下报告漏洞</h2>
+          <p>不要通过公开 Issue、Discussion、社交媒体帖子或公开日志提交凭据、token、证书、私钥、用户窗口内容、可识别身份的诊断信息或完整利用细节。</p>
+          <p>请使用仓库的 <strong>Security → Report a vulnerability</strong> 表单。如果该表单不可用，请发送邮件到 <code>ioriens@outlook.com</code>，并在主题中注明 <code>Security</code>。</p>
+          <p>报告应包含：</p>
+          <ul><li>受影响版本、macOS 版本和硬件架构；</li><li>影响范围和最小可重复步骤；</li><li>预期行为与实际行为；</li><li>如有需要，提供脱敏诊断信息；</li><li>是否已向其他人或平台披露。</li></ul>
+        </section>
+        <section>
+          <h2>处理原则</h2>
+          <ul><li>先确认报告和影响，再承诺严重等级或处理时间。</li><li>修复使用新版本，不替换已有 Release tag 或资产。</li><li>安全版本重新执行签名、公证、staple、Gatekeeper 和干净安装验证。</li><li>公开公告不包含用户数据，并在用户获得合理更新时间后再披露利用细节。</li></ul>
+        </section>
+        <section>
+          <h2>安全边界</h2>
+          <ul><li>应用在本机使用 macOS 辅助功能 API 检查并排列用户所选 App 的窗口。</li><li>macOS 要求用户明确批准辅助功能访问。</li><li>客户端构建不得包含 Apple、GitHub、公证、更新或其他服务凭据。</li><li>Developer ID 签名和 Apple 公证提供来源与完整性信号，但不能阻止复制、反编译或逆向工程。</li></ul>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Ding Junjie</p><nav aria-label="Footer navigation" data-aria-label-en="Footer navigation" data-aria-label-zh="页脚导航"><a href="index.html"><span data-language="en">Home</span><span data-language="zh">首页</span></a><a href="guide.html"><span data-language="en">Guide</span><span data-language="zh">指南</span></a><a href="privacy.html"><span data-language="en">Privacy</span><span data-language="zh">隐私</span></a><a href="support.html"><span data-language="en">Support</span><span data-language="zh">支持</span></a><a href="https://github.com/junjie-xyz/auto-window-arranger/security/advisories/new"><span data-language="en">Report privately</span><span data-language="zh">私下报告</span></a></nav></footer>
+  </body>
+</html>
