@@ -43,6 +43,7 @@ Read the complete [Privacy Policy](docs/PRIVACY.md). / 阅读完整的[隐私政
 ## Documentation / 文档
 
 - [Website / 官网](https://junjie.xyz/auto-window-arranger/)
+- [User Guide / 使用指南](docs/USER_GUIDE.md)
 - [Privacy / 隐私](docs/PRIVACY.md)
 - [Support / 支持](docs/SUPPORT.md)
 - [License / 许可](LICENSE)
