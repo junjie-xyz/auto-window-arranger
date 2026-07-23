@@ -22,6 +22,8 @@ First public beta.
 - Target-app installation and running-state feedback, persisted settings, shortcut-conflict feedback, and sanitized diagnostics.
 - Debug and Release test suites passed on Apple Silicon.
 - Universal packaging contains arm64 and x86_64 code.
+- The public Beta was downloaded with Safari and installed in a clean Lume macOS 26.5.2 VM with quarantine provenance preserved; SHA256, image validity, Gatekeeper acceptance, Finder installation to `/Applications`, and first launch into onboarding were verified.
+- A limited post-install UI and user smoke check was completed; this does not constitute full UI or stable-release validation.
 
 ### Requirements
 
@@ -31,4 +33,4 @@ First public beta.
 ### Known limitations
 
 - Intel code is included in the Universal package, but Intel hardware has not yet been verified.
-- Lume-based clean-install and full UI validation is not yet complete.
+- Full UI and broader compatibility validation remain incomplete, and stable `v1.0.0` has not been released.
