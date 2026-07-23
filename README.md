@@ -6,7 +6,7 @@ Auto Window Arranger is a macOS menu bar app that precisely arranges every windo
 
 ## Download
 
-Download the public beta from the dedicated [v1.0.0-beta.2 pre-release](https://github.com/junjie-xyz/auto-window-arranger/releases/tag/v1.0.0-beta.2). v1 is currently free.
+Download the public beta from the dedicated [v1.0.0-beta.3 pre-release](https://github.com/junjie-xyz/auto-window-arranger/releases/tag/v1.0.0-beta.3). v1 is currently free.
 
 ### Requirements
 

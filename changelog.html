@@ -25,6 +25,16 @@
         <section><p>This project follows <a href="https://semver.org/">Semantic Versioning</a>. Each release records verified features, known issues, minimum macOS version, and supported architectures.</p></section>
         <section><h2>Unreleased</h2><p>No unreleased public changes.</p></section>
         <section>
+          <h2>1.0.0-beta.3</h2>
+          <p class="document-meta">July 23, 2026 · Third public beta</p>
+          <h3>Fixed</h3>
+          <ul><li>The Launch at Login toggle remains available when Service Management reports that it cannot find the current service.</li><li>Enabling from that state now retries registration and keeps the Login Items Settings action available.</li><li>Registration failures show the macOS error description, domain, and code for further diagnosis.</li></ul>
+          <h3>Validation</h3>
+          <ul><li>All 114 automated tests passed, including the unavailable-status retry path and English and Simplified Chinese resources.</li><li>The Universal DMG contains <code>arm64</code> and <code>x86_64</code>, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.</li><li>DMG SHA256: <code>5c6c210aa603710ae145927c4b99244763d13954f7171d92b2380b43248f4ad1</code>.</li><li>At the user's request, this build did not perform a real login-item state change, VM install, or hardware functional test. Validation on macOS Tahoe 26.3.1 is pending user testing.</li></ul>
+          <h3>Requirements</h3><ul><li>macOS 14 or later.</li><li>Apple Silicon is supported.</li></ul>
+          <h3>Known limitations</h3><ul><li>Real Launch at Login registration on macOS Tahoe 26.3.1 is awaiting user confirmation.</li><li>Intel hardware, full UI, multi-display, and broader compatibility validation remain incomplete, and stable <code>v1.0.0</code> has not been released.</li></ul>
+        </section>
+        <section>
           <h2>1.0.0-beta.2</h2>
           <p class="document-meta">July 23, 2026 · Second public beta</p>
           <h3>Added</h3>
@@ -49,6 +59,16 @@
       <article class="document-content" data-language="zh" lang="zh-CN">
         <section><p>本项目采用<a href="https://semver.org/">语义化版本</a>。每个版本记录已验证功能、已知问题、最低 macOS 版本和支持架构。</p></section>
         <section><h2>尚未发布</h2><p>暂无尚未发布的公开变更。</p></section>
+        <section>
+          <h2>1.0.0-beta.3</h2>
+          <p class="document-meta">2026 年 7 月 23 日 · 第三个公开 Beta</p>
+          <h3>修复</h3>
+          <ul><li>Service Management 无法找到当前服务时，不再禁用“登录时启动”开关。</li><li>用户可从该状态重新尝试注册，并继续使用“打开登录项设置”入口。</li><li>注册失败时显示 macOS 错误说明、错误域和错误代码，便于继续定位。</li></ul>
+          <h3>验证</h3>
+          <ul><li>114 项自动测试全部通过，包括状态不可用时的重试路径，以及英文和简体中文资源。</li><li>Universal DMG 包含 <code>arm64</code> 和 <code>x86_64</code>，已使用 Developer ID 签名，公证状态为 Accepted，完成 staple，并通过映像、签名、entitlements 和 Gatekeeper 验证。</li><li>DMG SHA256：<code>5c6c210aa603710ae145927c4b99244763d13954f7171d92b2380b43248f4ad1</code>。</li><li>按用户要求，本版本没有执行真实登录项切换、VM 安装或真机功能测试；等待用户在 macOS Tahoe 26.3.1 上验证。</li></ul>
+          <h3>系统要求</h3><ul><li>macOS 14 或更高版本。</li><li>支持 Apple Silicon。</li></ul>
+          <h3>已知限制</h3><ul><li>macOS Tahoe 26.3.1 上的真实“登录时启动”注册结果等待用户确认。</li><li>Intel 真机、完整 UI、多显示器和更广兼容性场景仍未全部验证，stable <code>v1.0.0</code> 尚未发布。</li></ul>
+        </section>
         <section>
           <h2>1.0.0-beta.2</h2>
           <p class="document-meta">2026 年 7 月 23 日 · 第二个公开 Beta</p>

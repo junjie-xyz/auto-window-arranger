@@ -8,6 +8,33 @@ This project follows [Semantic Versioning](https://semver.org/). Each release re
 
 No unreleased public changes.
 
+## [1.0.0-beta.3] - 2026-07-23
+
+Third public beta, fixing Launch at Login recovery when macOS cannot read the initial login-item status.
+
+### Fixed
+
+- The Launch at Login toggle remains available when Service Management reports that it cannot find the current service.
+- Enabling from that state now retries registration and keeps the Login Items Settings action available.
+- Registration failures show the macOS error description, domain, and code for further diagnosis.
+
+### Validation
+
+- All 114 automated tests passed, including the unavailable-status retry path and English and Simplified Chinese resources.
+- The Universal DMG contains `arm64` and `x86_64`, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.
+- DMG SHA256: `5c6c210aa603710ae145927c4b99244763d13954f7171d92b2380b43248f4ad1`.
+- At the user's request, this build did not perform a real login-item state change, VM install, or hardware functional test. Validation on macOS Tahoe 26.3.1 is pending user testing.
+
+### Requirements
+
+- macOS 14 or later.
+- Apple Silicon is supported.
+
+### Known limitations
+
+- Real Launch at Login registration on macOS Tahoe 26.3.1 is awaiting user confirmation.
+- Intel hardware, full UI, multi-display, and broader compatibility validation remain incomplete, and stable `v1.0.0` has not been released.
+
 ## [1.0.0-beta.2] - 2026-07-23
 
 Second public beta, focused on settings and menu bar control.

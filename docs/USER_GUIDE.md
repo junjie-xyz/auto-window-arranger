@@ -59,7 +59,7 @@ Right-click the menu bar icon to access:
 
 Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. Clear a shortcut if you do not want that global action registered. If a shortcut conflicts with another app, choose a different combination in Settings.
 
-**Launch at Login** is off by default. Enabling it registers the main app with the supported macOS login-item service; no separate helper is installed.
+**Launch at Login** is off by default. Enabling it registers the main app with the supported macOS login-item service; no separate helper is installed. If macOS cannot read the current login-item status, the toggle remains available so you can retry and inspect the exact error or open Login Items Settings.
 
 ### Troubleshooting
 
