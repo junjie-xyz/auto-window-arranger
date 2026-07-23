@@ -25,6 +25,18 @@
         <section><p>This project follows <a href="https://semver.org/">Semantic Versioning</a>. Each release records verified features, known issues, minimum macOS version, and supported architectures.</p></section>
         <section><h2>Unreleased</h2><p>No unreleased public changes.</p></section>
         <section>
+          <h2>1.0.0-beta.2</h2>
+          <p class="document-meta">July 23, 2026 · Second public beta</p>
+          <h3>Added</h3>
+          <ul><li>Launch at Login using the supported macOS login-item service, off by default and synchronized with the system state.</li><li>A setting that chooses whether left-clicking the menu bar icon arranges one app or all selected running apps together.</li><li>A persistent switch for automatic arrangement after eligible windows open or close; manual menu and shortcut actions remain available when it is off.</li><li>Clear actions for both global shortcuts, including persistence of an unset shortcut.</li></ul>
+          <h3>Changed</h3>
+          <ul><li>Redesigned Settings with clearer sections for menu bar behavior, shortcuts, active apps, and startup.</li><li>Shortcut recording temporarily suspends registered global shortcuts so an existing combination is not intercepted before recording.</li><li>Reset All Settings now restores the click action and automatic arrangement and turns off Launch at Login.</li></ul>
+          <h3>Validation</h3>
+          <ul><li>All 113 automated tests passed, including localization, light and dark Settings layouts, login-item state, shortcut recording, automatic-task cancellation, and preference reset.</li><li>The Universal DMG contains <code>arm64</code> and <code>x86_64</code>, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.</li></ul>
+          <h3>Requirements</h3><ul><li>macOS 14 or later.</li><li>Apple Silicon is supported.</li></ul>
+          <h3>Known limitations</h3><ul><li>Intel code is included in the Universal package, but Intel hardware has not yet been verified.</li><li>Full UI, multi-display, and broader compatibility validation remain incomplete, and stable <code>v1.0.0</code> has not been released.</li></ul>
+        </section>
+        <section>
           <h2>1.0.0-beta.1</h2>
           <p class="document-meta">July 19, 2026 · First public beta</p>
           <h3>Verified</h3>
@@ -37,6 +49,18 @@
       <article class="document-content" data-language="zh" lang="zh-CN">
         <section><p>本项目采用<a href="https://semver.org/">语义化版本</a>。每个版本记录已验证功能、已知问题、最低 macOS 版本和支持架构。</p></section>
         <section><h2>尚未发布</h2><p>暂无尚未发布的公开变更。</p></section>
+        <section>
+          <h2>1.0.0-beta.2</h2>
+          <p class="document-meta">2026 年 7 月 23 日 · 第二个公开 Beta</p>
+          <h3>新增</h3>
+          <ul><li>使用 macOS 官方登录项机制支持“登录时启动”，默认关闭并与系统真实状态同步。</li><li>支持选择左键点击菜单栏图标时排列一个 App，或组合排列所有已选择且正在运行的 App。</li><li>支持持久关闭符合条件的窗口打开或关闭后的自动排列；关闭后仍可使用菜单和快捷键手动排列。</li><li>两个全局快捷键均可清空，并持久保存未设置状态。</li></ul>
+          <h3>变更</h3>
+          <ul><li>重新设计设置界面，清晰划分菜单栏、快捷键、生效 App 和启动选项。</li><li>录制快捷键时暂时停用已注册的全局快捷键，避免现有组合在录制前被拦截。</li><li>恢复所有默认设置时会同时恢复点击动作和自动排列，并关闭登录时启动。</li></ul>
+          <h3>验证</h3>
+          <ul><li>113 项自动测试全部通过，覆盖本地化、明暗模式设置布局、登录项状态、快捷键录制、自动任务取消和偏好恢复。</li><li>Universal DMG 包含 <code>arm64</code> 和 <code>x86_64</code>，已使用 Developer ID 签名，公证状态为 Accepted，完成 staple，并通过映像、签名、entitlements 和 Gatekeeper 验证。</li></ul>
+          <h3>系统要求</h3><ul><li>macOS 14 或更高版本。</li><li>支持 Apple Silicon。</li></ul>
+          <h3>已知限制</h3><ul><li>Universal 包已包含 Intel 代码，但 Intel 真机尚未验证。</li><li>完整 UI、多显示器和更广兼容性场景仍未全部验证，stable <code>v1.0.0</code> 尚未发布。</li></ul>
+        </section>
         <section>
           <h2>1.0.0-beta.1</h2>
           <p class="document-meta">2026 年 7 月 19 日 · 首个公开 Beta</p>

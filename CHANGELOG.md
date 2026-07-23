@@ -8,6 +8,38 @@ This project follows [Semantic Versioning](https://semver.org/). Each release re
 
 No unreleased public changes.
 
+## [1.0.0-beta.2] - 2026-07-23
+
+Second public beta, focused on settings and menu bar control.
+
+### Added
+
+- Launch at Login using the supported macOS login-item service, off by default and synchronized with the system state.
+- A setting that chooses whether left-clicking the menu bar icon arranges one app or all selected running apps together.
+- A persistent switch for automatic arrangement after eligible windows open or close; manual menu and shortcut actions remain available when it is off.
+- Clear actions for both global shortcuts, including persistence of an unset shortcut.
+
+### Changed
+
+- Redesigned Settings with clearer sections for menu bar behavior, shortcuts, active apps, and startup.
+- Shortcut recording temporarily suspends registered global shortcuts so an existing combination is not intercepted before recording.
+- Reset All Settings now restores the click action and automatic arrangement and turns off Launch at Login.
+
+### Validation
+
+- All 113 automated tests passed, including localization, light and dark Settings layouts, login-item state, shortcut recording, automatic-task cancellation, and preference reset.
+- The Universal DMG contains `arm64` and `x86_64`, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.
+
+### Requirements
+
+- macOS 14 or later.
+- Apple Silicon is supported.
+
+### Known limitations
+
+- Intel code is included in the Universal package, but Intel hardware has not yet been verified.
+- Full UI, multi-display, and broader compatibility validation remain incomplete, and stable `v1.0.0` has not been released.
+
 ## [1.0.0-beta.1] - 2026-07-19
 
 First public beta.

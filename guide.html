@@ -89,7 +89,8 @@
         <section>
           <h2>Arrange windows</h2>
           <ul>
-            <li><strong>Left-click the menu bar icon:</strong> arrange one selected, running app.</li>
+            <li><strong>Left-click the menu bar icon:</strong> perform the click action selected in Settings. The default arranges one selected, running app; you can switch it to combined arrangement.</li>
+            <li><strong>Right-click the menu bar icon:</strong> always open the menu.</li>
             <li><strong>Arrange Now:</strong> perform the same single-app arrangement from the right-click menu.</li>
             <li><strong>Arrange Together:</strong> place the windows of all selected, running apps into one combined layout.</li>
             <li><strong>Default single-app shortcut:</strong> <code>⌥⌘A</code>.</li>
@@ -101,6 +102,7 @@
         <section>
           <h2>Automatic arrangement</h2>
           <p>After Accessibility permission is granted, Auto Window Arranger monitors the selected apps. Opening or closing an eligible window schedules a new arrangement after the window state settles, normally within about one second.</p>
+          <p>Turn off <strong>Automatically arrange when windows open or close</strong> in Settings when you only want manual arrangement. Menu actions and configured shortcuts remain available.</p>
           <p>The app only handles standard windows whose position and size macOS allows it to change. Dialogs, popovers, fixed-size windows, and other auxiliary windows may be skipped.</p>
         </section>
         <section>
@@ -109,11 +111,12 @@
           <ul>
             <li><strong>Arrange Now</strong> and <strong>Arrange Together</strong>;</li>
             <li><strong>Accessibility Permission…</strong> to review or recover authorization;</li>
-            <li><strong>Settings…</strong> to add or remove apps, change both shortcuts, enable or disable app cycling, or reset all settings;</li>
+            <li><strong>Settings…</strong> to choose the left-click action, record, reset, or clear both shortcuts, add or remove apps, control app cycling and automatic arrangement, manage Launch at Login, or reset all settings;</li>
             <li><strong>Copy Diagnostics</strong> to copy a sanitized local report for support;</li>
             <li><strong>About Auto Window Arranger…</strong> and <strong>Quit</strong>.</li>
           </ul>
-          <p>Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. If a shortcut conflicts with another app, choose a different combination in Settings.</p>
+          <p>Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. Clear a shortcut if you do not want that global action registered. If a shortcut conflicts with another app, choose a different combination in Settings.</p>
+          <p><strong>Launch at Login</strong> is off by default. Enabling it registers the main app with the supported macOS login-item service; no separate helper is installed.</p>
         </section>
         <section>
           <h2>Troubleshooting</h2>
@@ -130,12 +133,13 @@
         <section>
           <h2>Uninstall</h2>
           <ol>
+            <li>If <strong>Launch at Login</strong> is enabled, turn it off in Settings.</li>
             <li>Choose <strong>Quit</strong> from the right-click menu.</li>
             <li>Move <strong>Auto Window Arranger</strong> from <code>/Applications</code> to the Trash using Finder.</li>
             <li>Optionally remove its saved settings:</li>
           </ol>
           <pre><code>defaults delete xyz.junjie.auto-window-arranger</code></pre>
-          <p>Optionally remove Auto Window Arranger from <strong>System Settings → Privacy &amp; Security → Accessibility</strong>. The app does not install a background helper or automatic updater.</p>
+          <p>Optionally remove Auto Window Arranger from <strong>System Settings → Privacy &amp; Security → Accessibility</strong>. The app does not install a separate background helper or automatic updater.</p>
         </section>
       </article>
 
@@ -171,7 +175,8 @@
         <section>
           <h2>排列窗口</h2>
           <ul>
-            <li><strong>左键点击菜单栏图标：</strong>排列一个已选择且正在运行的 App。</li>
+            <li><strong>左键点击菜单栏图标：</strong>执行设置中选择的点击动作。默认排列一个已选择且正在运行的 App，也可以切换为组合排列。</li>
+            <li><strong>右键点击菜单栏图标：</strong>始终打开菜单。</li>
             <li><strong>立即排列：</strong>从右键菜单执行相同的单 App 排列。</li>
             <li><strong>组合排列：</strong>把所有已选择且正在运行的 App 窗口放入一个组合布局。</li>
             <li><strong>默认单 App 快捷键：</strong><code>⌥⌘A</code>。</li>
@@ -183,6 +188,7 @@
         <section>
           <h2>自动排列</h2>
           <p>取得辅助功能权限后，Auto Window Arranger 会监控所选 App。符合条件的窗口打开或关闭后，应用会等待窗口状态稳定并重新排列，通常在约一秒内触发。</p>
+          <p>如果只想手动排列，可以在设置中关闭“窗口打开或关闭后自动排列”。关闭后，菜单动作和已配置的快捷键仍然可用。</p>
           <p>应用只处理 macOS 允许修改位置和尺寸的标准窗口。对话框、popover、固定尺寸窗口和其他辅助窗口可能被跳过。</p>
         </section>
         <section>
@@ -191,11 +197,12 @@
           <ul>
             <li>“立即排列”和“组合排列”；</li>
             <li>“辅助功能权限…”：查看或恢复授权；</li>
-            <li>“设置…”：添加或移除 App、修改两个快捷键、开启或关闭 App 循环，或重置全部设置；</li>
+            <li>“设置…”：选择左键点击动作，录制、恢复或清空两个快捷键，添加或移除 App，控制 App 循环和自动排列，管理登录时启动，或恢复全部默认设置；</li>
             <li>“复制诊断信息”：复制用于支持的脱敏本机报告；</li>
             <li>“关于 Auto Window Arranger…”和“退出”。</li>
           </ul>
-          <p>自定义快捷键必须包含 Command、Option 或 Control。两个排列动作不能使用相同快捷键。如果快捷键与其他应用冲突，请在设置中更换组合。</p>
+          <p>自定义快捷键必须包含 Command、Option 或 Control。两个排列动作不能使用相同快捷键；如果不希望注册某个全局动作，可以清空该快捷键。如果快捷键与其他应用冲突，请在设置中更换组合。</p>
+          <p>“登录时启动”默认关闭。启用后会通过 macOS 官方登录项服务注册主 App，不会安装单独的 helper。</p>
         </section>
         <section>
           <h2>常见问题</h2>
@@ -212,12 +219,13 @@
         <section>
           <h2>卸载</h2>
           <ol>
+            <li>如果启用了“登录时启动”，先在设置中将其关闭。</li>
             <li>从右键菜单选择“退出”。</li>
             <li>使用 Finder 将 <code>/Applications</code> 中的 <strong>Auto Window Arranger</strong> 移到废纸篓。</li>
             <li>如需同时删除已保存的设置，可以运行：</li>
           </ol>
           <pre><code>defaults delete xyz.junjie.auto-window-arranger</code></pre>
-          <p>如有需要，在“系统设置 → 隐私与安全性 → 辅助功能”中移除 Auto Window Arranger。应用不会安装后台 helper 或自动更新程序。</p>
+          <p>如有需要，在“系统设置 → 隐私与安全性 → 辅助功能”中移除 Auto Window Arranger。应用不会安装单独的后台 helper 或自动更新程序。</p>
         </section>
       </article>
     </main>

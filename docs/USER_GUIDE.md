@@ -28,7 +28,8 @@ You can change the selected apps later in **Settings…**. Auto Window Arranger 
 
 ### Arrange windows
 
-- **Left-click the menu bar icon:** arrange one selected, running app.
+- **Left-click the menu bar icon:** perform the click action selected in Settings. The default arranges one selected, running app; you can switch it to combined arrangement.
+- **Right-click the menu bar icon:** always open the menu.
 - **Arrange Now:** perform the same single-app arrangement from the right-click menu.
 - **Arrange Together:** place the windows of all selected, running apps into one combined layout.
 - **Default single-app shortcut:** `⌥⌘A`.
@@ -42,6 +43,8 @@ When app cycling is enabled, repeated manual single-app arrangements move throug
 
 After Accessibility permission is granted, Auto Window Arranger monitors the selected apps. Opening or closing an eligible window schedules a new arrangement after the window state settles, normally within about one second.
 
+Turn off **Automatically arrange when windows open or close** in Settings when you only want manual arrangement. Menu actions and configured shortcuts remain available.
+
 The app only handles standard windows whose position and size macOS allows it to change. Dialogs, popovers, fixed-size windows, and other auxiliary windows may be skipped.
 
 ### Settings and menu
@@ -50,11 +53,13 @@ Right-click the menu bar icon to access:
 
 - **Arrange Now** and **Arrange Together**;
 - **Accessibility Permission…** to review or recover authorization;
-- **Settings…** to add or remove apps, change both shortcuts, enable or disable app cycling, or reset all settings;
+- **Settings…** to choose the left-click action, record, reset, or clear both shortcuts, add or remove apps, control app cycling and automatic arrangement, manage Launch at Login, or reset all settings;
 - **Copy Diagnostics** to copy a sanitized local report for support;
 - **About Auto Window Arranger…** and **Quit**.
 
-Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. If a shortcut conflicts with another app, choose a different combination in Settings.
+Custom shortcuts must include Command, Option, or Control. The two arrangement actions cannot use the same shortcut. Clear a shortcut if you do not want that global action registered. If a shortcut conflicts with another app, choose a different combination in Settings.
+
+**Launch at Login** is off by default. Enabling it registers the main app with the supported macOS login-item service; no separate helper is installed.
 
 ### Troubleshooting
 
@@ -78,14 +83,15 @@ For help, read [Support](SUPPORT.md) or open a [GitHub Issue](https://github.com
 
 ### Uninstall
 
-1. Choose **Quit** from the right-click menu.
-2. Move **Auto Window Arranger** from `/Applications` to the Trash using Finder.
-3. Optionally remove its saved settings:
+1. If **Launch at Login** is enabled, turn it off in Settings.
+2. Choose **Quit** from the right-click menu.
+3. Move **Auto Window Arranger** from `/Applications` to the Trash using Finder.
+4. Optionally remove its saved settings:
 
    ```bash
    defaults delete xyz.junjie.auto-window-arranger
    ```
 
-4. Optionally remove Auto Window Arranger from **System Settings → Privacy & Security → Accessibility**.
+5. Optionally remove Auto Window Arranger from **System Settings → Privacy & Security → Accessibility**.
 
-The app does not install a background helper or automatic updater.
+The app does not install a separate background helper or automatic updater.
