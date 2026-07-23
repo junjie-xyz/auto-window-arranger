@@ -32,7 +32,7 @@
           <h3>Changed</h3>
           <ul><li>Redesigned Settings with clearer sections for menu bar behavior, shortcuts, active apps, and startup.</li><li>Shortcut recording temporarily suspends registered global shortcuts so an existing combination is not intercepted before recording.</li><li>Reset All Settings now restores the click action and automatic arrangement and turns off Launch at Login.</li></ul>
           <h3>Validation</h3>
-          <ul><li>All 113 automated tests passed, including localization, light and dark Settings layouts, login-item state, shortcut recording, automatic-task cancellation, and preference reset.</li><li>The Universal DMG contains <code>arm64</code> and <code>x86_64</code>, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.</li></ul>
+          <ul><li>All 113 automated tests passed, including localization, light and dark Settings layouts, login-item state, shortcut recording, automatic-task cancellation, and preference reset.</li><li>The Universal DMG contains <code>arm64</code> and <code>x86_64</code>, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.</li><li>All three public Release assets were downloaded again and matched the published SHA256 and release manifest.</li><li>The verified DMG was installed in a disposable clone of a clean Lume macOS 26.5.2 VM, and the first app process launch succeeded. The host Mac was locked, so Finder drag-install and onboarding visual evidence were not repeated for this build; this does not constitute full UI validation.</li></ul>
           <h3>Requirements</h3><ul><li>macOS 14 or later.</li><li>Apple Silicon is supported.</li></ul>
           <h3>Known limitations</h3><ul><li>Intel code is included in the Universal package, but Intel hardware has not yet been verified.</li><li>Full UI, multi-display, and broader compatibility validation remain incomplete, and stable <code>v1.0.0</code> has not been released.</li></ul>
         </section>
@@ -57,7 +57,7 @@
           <h3>变更</h3>
           <ul><li>重新设计设置界面，清晰划分菜单栏、快捷键、生效 App 和启动选项。</li><li>录制快捷键时暂时停用已注册的全局快捷键，避免现有组合在录制前被拦截。</li><li>恢复所有默认设置时会同时恢复点击动作和自动排列，并关闭登录时启动。</li></ul>
           <h3>验证</h3>
-          <ul><li>113 项自动测试全部通过，覆盖本地化、明暗模式设置布局、登录项状态、快捷键录制、自动任务取消和偏好恢复。</li><li>Universal DMG 包含 <code>arm64</code> 和 <code>x86_64</code>，已使用 Developer ID 签名，公证状态为 Accepted，完成 staple，并通过映像、签名、entitlements 和 Gatekeeper 验证。</li></ul>
+          <ul><li>113 项自动测试全部通过，覆盖本地化、明暗模式设置布局、登录项状态、快捷键录制、自动任务取消和偏好恢复。</li><li>Universal DMG 包含 <code>arm64</code> 和 <code>x86_64</code>，已使用 Developer ID 签名，公证状态为 Accepted，完成 staple，并通过映像、签名、entitlements 和 Gatekeeper 验证。</li><li>已重新下载公开 Release 的三个资产，并确认 SHA256 与 release manifest 一致。</li><li>已在干净 Lume macOS 26.5.2 基准 VM 的一次性克隆中安装经过校验的 DMG，并确认首次应用进程启动成功。因宿主 Mac 锁屏，本构建没有重新取得 Finder 拖拽安装与首次引导的可视化证据；这不代表完整 UI 验收已经完成。</li></ul>
           <h3>系统要求</h3><ul><li>macOS 14 或更高版本。</li><li>支持 Apple Silicon。</li></ul>
           <h3>已知限制</h3><ul><li>Universal 包已包含 Intel 代码，但 Intel 真机尚未验证。</li><li>完整 UI、多显示器和更广兼容性场景仍未全部验证，stable <code>v1.0.0</code> 尚未发布。</li></ul>
         </section>

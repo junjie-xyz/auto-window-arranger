@@ -29,6 +29,8 @@ Second public beta, focused on settings and menu bar control.
 
 - All 113 automated tests passed, including localization, light and dark Settings layouts, login-item state, shortcut recording, automatic-task cancellation, and preference reset.
 - The Universal DMG contains `arm64` and `x86_64`, was signed with Developer ID, notarized with status Accepted, stapled, and passed image, signature, entitlement, and Gatekeeper validation.
+- All three public Release assets were downloaded again and matched the published SHA256 and release manifest.
+- The verified DMG was installed in a disposable clone of a clean Lume macOS 26.5.2 VM, and the first app process launch succeeded. The host Mac was locked, so Finder drag-install and onboarding visual evidence were not repeated for this build; this does not constitute full UI validation.
 
 ### Requirements
 
